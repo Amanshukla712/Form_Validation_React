@@ -588,14 +588,14 @@ const Form = () => {
   };
 
   const isValidAadhar = (aadhar) => {
-    const aadharRegex = /^\d{16}$/;
+    const aadharRegex = /^\d{12}$/;
     return aadharRegex.test(aadhar);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      navigate("/details", { state: { formData } });
+      navigate("/Details", { state: { formData } });
     }
   };
 
